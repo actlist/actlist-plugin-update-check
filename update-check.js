@@ -9,25 +9,21 @@ var url = 'https://github.com/silentsoft/actlist-plugin-update-check/releases'; 
 //====================================================================================================================
 
 
-/* The plugin's version will be invoked as 'version' variable from Actlist engine. */
-var version = version;
 /* IIFE (Immediately Invoked Function Expression) */
 (function() {
-	var HashMap = Java.type('java.util.HashMap');
-	var response = new HashMap();
-	
-	var available = existsAvailableUpdate();
-	response.put('available', available);
-	if (available) {
-		response.put('url', url);
-	}
-	response.put('endOfService', endOfService());
-	response.put('killSwitch', killSwitch());
-	
-	return response;
+	return {
+		'available': available(),
+		'url': url,
+		'endOfService': endOfService(),
+		'killSwitch': killSwitch()
+	};
 }());
 
-function existsAvailableUpdate() {
+
+/* The plugin's version will be invoked as 'version' variable from Actlist engine. */
+var version = version;
+
+function available() {
 	return compare(latestVersion, version) > 0;
 }
 
