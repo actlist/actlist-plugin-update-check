@@ -5,7 +5,7 @@ import org.silentsoft.actlist.plugin.ActlistPlugin;
 public class Plugin extends ActlistPlugin {
 
 	public static void main(String[] args) {
-		//debug();
+		debug();
 	}
 	
 	public Plugin() throws Exception {
