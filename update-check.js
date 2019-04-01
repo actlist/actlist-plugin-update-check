@@ -3,6 +3,7 @@
 //             the alphabetical character calculation like 'alpha' or 'beta' is excluded on this script.
 //====================================================================================================================
 var latestVersion = '1.3.0';		// change this value to what you want.
+var jar = 'https://github.com/silentsoft/actlist-plugin-update-check/releases/download/v1.3.0/update-check-1.3.0.jar';
 var url = 'https://github.com/silentsoft/actlist-plugin-update-check/releases'; // change this value to what you want.
 //var killSwitchUntil   = '1.1.0';	// fill this value if necessary.
 //var endOfServiceUntil = '1.2.0';	// fill this value if necessary.
@@ -13,6 +14,7 @@ var url = 'https://github.com/silentsoft/actlist-plugin-update-check/releases'; 
 (function() {
 	return {
 		'available': available(),
+		'jar': jar,
 		'url': url,
 		'endOfService': endOfService(),
 		'killSwitch': killSwitch()
